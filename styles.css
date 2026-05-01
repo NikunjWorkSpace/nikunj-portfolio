@@ -5,9 +5,9 @@
 }
 
 :root {
-    --bg: #f6f8fb;
+    --bg: #f5f7fa;
     --surface: #ffffff;
-    --surface-soft: #eef4f8;
+    --surface-soft: #eef5f4;
     --ink: #142033;
     --text: #253247;
     --muted: #627084;
@@ -20,6 +20,10 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
 }
 
 body {
@@ -35,9 +39,10 @@ a {
 }
 
 .container {
-    max-width: 1160px;
+    max-width: 1180px;
     margin: 0 auto;
     padding: 0 24px;
+    width: 100%;
 }
 
 .navbar {
@@ -109,24 +114,26 @@ a {
 }
 
 section {
-    padding: 82px 0;
+    padding: clamp(58px, 7vw, 82px) 0;
 }
 
 .hero {
     align-items: center;
     background:
-        linear-gradient(135deg, rgba(15, 118, 110, 0.08), rgba(37, 99, 235, 0.06)),
+        radial-gradient(circle at 90% 16%, rgba(15, 118, 110, 0.12), transparent 24rem),
+        linear-gradient(135deg, rgba(15, 118, 110, 0.08), rgba(255, 255, 255, 0.9) 52%, rgba(37, 99, 235, 0.05)),
         var(--surface);
     display: flex;
-    min-height: calc(100vh - 72px);
-    padding: 72px 0;
+    min-height: auto;
+    overflow: hidden;
+    padding: clamp(48px, 6vw, 68px) 0;
 }
 
 .hero-grid {
     align-items: center;
     display: grid;
-    gap: 4rem;
-    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    gap: clamp(2rem, 4.5vw, 3.5rem);
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 350px);
 }
 
 .eyebrow {
@@ -144,12 +151,12 @@ section {
 
 .hero-title {
     color: var(--ink);
-    font-size: 4.25rem;
+    font-size: clamp(2.35rem, 4.1vw, 3.35rem);
     font-weight: 800;
     letter-spacing: 0;
-    line-height: 1.03;
+    line-height: 1.08;
     margin-bottom: 1.25rem;
-    max-width: 840px;
+    max-width: 650px;
 }
 
 .section-title {
@@ -163,15 +170,41 @@ section {
 
 .hero-subtitle {
     color: var(--muted);
-    font-size: 1.18rem;
+    font-size: clamp(1rem, 1.8vw, 1.12rem);
+    max-width: 660px;
+}
+
+.hero-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.4rem;
     max-width: 690px;
+}
+
+.hero-services span {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(217, 226, 236, 0.95);
+    border-radius: 8px;
+    color: var(--text);
+    display: inline-flex;
+    font-size: 0.94rem;
+    font-weight: 700;
+    gap: 0.5rem;
+    padding: 0.55rem 0.75rem;
+}
+
+.hero-services i {
+    color: var(--primary);
+    font-size: 0.78rem;
 }
 
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 0.9rem;
-    margin-top: 2rem;
+    margin-top: 1.6rem;
 }
 
 .btn {
@@ -208,53 +241,77 @@ section {
 }
 
 .trust-strip {
-    display: grid;
-    gap: 0.8rem;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 2rem;
-    max-width: 760px;
+    border-top: 1px solid rgba(98, 112, 132, 0.24);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.8rem;
+    margin-top: 1.8rem;
+    max-width: 720px;
+    padding-top: 1.2rem;
 }
 
 .trust-strip span {
-    background: rgba(255, 255, 255, 0.78);
-    border: 1px solid var(--border);
-    border-radius: 8px;
     color: var(--muted);
-    padding: 0.9rem;
+    font-size: 0.95rem;
+    min-width: 138px;
 }
 
 .trust-strip strong {
     color: var(--ink);
     display: block;
+    font-size: 1.02rem;
 }
 
 .profile-panel {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    padding: 1rem;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.68)),
+        var(--surface);
+    border: 1px solid rgba(217, 226, 236, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 18px 45px rgba(20, 32, 51, 0.12);
+    justify-self: end;
+    max-width: 350px;
+    padding: 0.7rem;
+    position: relative;
+    width: 100%;
+}
+
+.profile-panel::before {
+    background: var(--primary);
+    border-radius: 999px;
+    content: "";
+    height: 72px;
+    left: -16px;
+    opacity: 0.1;
+    position: absolute;
+    top: 36px;
+    width: 72px;
+    z-index: 0;
 }
 
 .profile-photo {
     aspect-ratio: 431 / 549;
-    border-radius: 8px;
+    border-radius: 14px;
     display: block;
     object-fit: contain;
     object-position: center top;
+    position: relative;
     width: 100%;
+    z-index: 1;
 }
 
 .quick-card {
     align-items: center;
     background: var(--surface-soft);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 10px;
     display: flex;
     gap: 0.8rem;
     justify-content: space-between;
-    margin-top: 1rem;
-    padding: 1rem;
+    margin-top: 0.7rem;
+    padding: 0.8rem 0.9rem;
+    position: relative;
+    z-index: 2;
 }
 
 .quick-card span {
@@ -264,7 +321,9 @@ section {
 
 .quick-card strong {
     color: var(--ink);
+    font-size: 0.95rem;
     text-align: right;
+    line-height: 1.35;
 }
 
 .about,
@@ -292,7 +351,7 @@ section {
 .about-stats {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     margin-top: 1.6rem;
 }
 
@@ -337,19 +396,19 @@ section {
 
 .services-grid,
 .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .timeline {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .process-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .service-card,
@@ -478,6 +537,7 @@ section {
     display: inline-flex;
     gap: 0.75rem;
     text-decoration: none;
+    overflow-wrap: anywhere;
 }
 
 .contact-list i {
@@ -533,17 +593,9 @@ section {
         grid-template-columns: 1fr;
     }
 
-    .timeline,
-    .skills-grid,
-    .projects-grid,
-    .services-grid,
-    .process-grid,
-    .trust-strip {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .profile-panel {
-        max-width: 430px;
+        justify-self: start;
+        max-width: 340px;
     }
 }
 
@@ -580,26 +632,20 @@ section {
         text-align: center;
     }
 
-    section,
-    .hero {
-        padding: 58px 0;
+    .hero-grid {
+        gap: 2.25rem;
     }
 
-    .hero-title {
-        font-size: 2.65rem;
+    .hero-services {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     .section-title {
-        font-size: 2.1rem;
+        font-size: clamp(1.9rem, 8vw, 2.3rem);
     }
 
-    .about-stats,
-    .timeline,
-    .skills-grid,
-    .projects-grid,
-    .services-grid,
-    .process-grid,
-    .trust-strip {
+    .about-stats {
         grid-template-columns: 1fr;
     }
 
@@ -617,8 +663,50 @@ section {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 18px;
+    }
+
+    .hero-title {
+        font-size: 2.18rem;
+    }
+
+    .hero-subtitle,
+    .about-text p,
+    .resume-card p,
+    .contact-copy {
+        font-size: 1rem;
+    }
+
     .hero-buttons,
     .btn {
         width: 100%;
+    }
+
+    .profile-panel {
+        max-width: 320px;
+    }
+
+    .trust-strip {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid,
+    .projects-grid,
+    .skills-grid,
+    .timeline,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card,
+    .skill-category,
+    .project-card,
+    .process-step,
+    .timeline-item,
+    .contact-cta,
+    .resume-card {
+        padding: 1.15rem;
     }
 }
