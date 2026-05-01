@@ -3,225 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikunj Patel - Portfolio</title>
+    <meta name="description" content="Nikunj Patel portfolio - Senior Software Engineer and Team Lead specializing in ASP.NET MVC, Web API, C#, SQL Server, and enterprise web applications.">
+    <title>Nikunj Patel | Senior Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <span class="logo-text">NP</span>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+        <div class="container nav-wrapper">
+            <a class="logo" href="#home" aria-label="Nikunj Patel home">NP</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Open navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Nikunj Patel</span></h1>
-                <p class="hero-subtitle">Full Stack Developer | Problem Solver | Tech Enthusiast</p>
-                <p class="hero-description">I create beautiful and functional web applications with modern technologies</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow">Senior Software Engineer & Team Lead</p>
+                    <h1 class="hero-title">Hi, I'm <span>Nikunj Patel</span>.</h1>
+                    <p class="hero-subtitle">I design and deliver scalable enterprise web applications using Microsoft technologies, with 12+ years across ASP.NET MVC, Web API, C#, SQL Server, and team leadership.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary"><i class="fas fa-layer-group"></i> View Projects</a>
+                        <a href="assets/nikunj_resume.pdf" class="btn btn-secondary" download><i class="fas fa-download"></i> Download Resume</a>
+                    </div>
+                </div>
+                <div class="profile-panel" aria-label="Profile photo">
+                    <img src="assets/profile-picture.png" alt="Nikunj Patel profile picture" class="profile-photo">
+                    <div class="quick-card">
+                        <span>Available for</span>
+                        <strong>Enterprise web application delivery</strong>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
+        <section id="about" class="about">
+            <div class="container section-grid">
+                <div>
+                    <p class="eyebrow">About Me</p>
+                    <h2 class="section-title">Engineering lead focused on scalable Microsoft-stack products.</h2>
+                </div>
                 <div class="about-text">
-                    <p>I'm a passionate full-stack developer with a strong foundation in web development. I love solving complex problems and building scalable applications that make a difference.</p>
-                    <p>With expertise in modern web technologies, I focus on creating clean, efficient code and delivering exceptional user experiences.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or learning about emerging trends in tech.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>5+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat">
-                        <h3>20+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="stat">
-                        <h3>15+</h3>
-                        <p>Happy Clients</p>
+                    <p>I am Nikunj Patel, a Senior Software Engineer and Team Lead from Gujarat, India. I work on enterprise web applications, translating business requirements into maintainable technical solutions and leading teams through delivery.</p>
+                    <p>My domain experience includes payroll, healthcare compliance, online training, delivery services, marketing and advertisement, hotel management, transport management, and student management systems.</p>
+                    <div class="about-stats">
+                        <div class="stat"><strong>12+ Years</strong><span>Software experience</span></div>
+                        <div class="stat"><strong>7+ Years</strong><span>Team lead role</span></div>
+                        <div class="stat"><strong>MCA</strong><span>Computer Applications</span></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Vue.js</span>
-                        <span class="skill-tag">Responsive Design</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">REST APIs</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">GitHub</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Netlify</span>
-                        <span class="skill-tag">VS Code</span>
-                    </div>
+        <section id="experience" class="experience">
+            <div class="container">
+                <p class="eyebrow centered">Professional Experience</p>
+                <h2 class="section-title centered">Leadership, architecture, and delivery.</h2>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <span>7+ Years</span>
+                        <h3>Tatvasoft</h3>
+                        <p>Senior Software Engineer & Team Lead</p>
+                        <ul>
+                            <li>Led cross-functional development teams for enterprise web applications.</li>
+                            <li>Designed scalable multi-tier architecture and reviewed code quality.</li>
+                            <li>Managed deployment, troubleshooting, performance tuning, and production support.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <span>4 Years</span>
+                        <h3>Envitics Solution</h3>
+                        <p>Software Developer</p>
+                        <ul>
+                            <li>Developed enterprise applications using ASP.NET MVC and SQL Server.</li>
+                            <li>Implemented business modules from client requirements.</li>
+                            <li>Collaborated with QA and stakeholders for successful delivery.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <span>1 Year</span>
+                        <h3>5P Development</h3>
+                        <p>Software Developer</p>
+                        <ul>
+                            <li>Built web applications using ASP.NET and SQL Server.</li>
+                            <li>Designed databases, backend logic, maintenance, and production support.</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-stack e-commerce solution built with React, Node.js, and MongoDB featuring product management, cart functionality, and payment integration.</p>
-                    <div class="project-tags">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                    </div>
-                    <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Analytics Dashboard</h3>
-                    <p>Real-time analytics dashboard with interactive charts and data visualization using Chart.js and modern UI design principles.</p>
-                    <div class="project-tags">
-                        <span>React</span>
-                        <span>Chart.js</span>
-                        <span>API</span>
-                    </div>
-                    <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Task Management App</h3>
-                    <p>A responsive task management application with drag-and-drop functionality, user authentication, and real-time updates.</p>
-                    <div class="project-tags">
-                        <span>Vue.js</span>
-                        <span>Firebase</span>
-                        <span>Responsive</span>
-                    </div>
-                    <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+        <section id="skills" class="skills">
+            <div class="container">
+                <p class="eyebrow centered">Skill Sets</p>
+                <h2 class="section-title centered">Technologies I Work With</h2>
+                <div class="skills-grid">
+                    <article class="skill-category">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend</h3>
+                        <div class="skill-list">
+                            <span>C#</span><span>ASP.NET</span><span>ASP.NET MVC</span><span>Web API</span><span>RESTful APIs</span><span>ADO.NET</span><span>Entity Framework</span><span>LINQ</span>
+                        </div>
+                    </article>
+                    <article class="skill-category">
+                        <i class="fas fa-code"></i>
+                        <h3>Frontend</h3>
+                        <div class="skill-list">
+                            <span>JavaScript</span><span>jQuery</span><span>HTML5</span><span>CSS3</span><span>DevExtreme</span><span>Sitefinity CMS</span>
+                        </div>
+                    </article>
+                    <article class="skill-category">
+                        <i class="fas fa-database"></i>
+                        <h3>Database & Reporting</h3>
+                        <div class="skill-list">
+                            <span>Microsoft SQL Server</span><span>SSRS</span><span>SQL Optimization</span><span>Database Design</span><span>Reporting</span>
+                        </div>
+                    </article>
+                    <article class="skill-category">
+                        <i class="fas fa-screwdriver-wrench"></i>
+                        <h3>Tools & Platforms</h3>
+                        <div class="skill-list">
+                            <span>Visual Studio</span><span>IIS</span><span>GitHub</span><span>SVN</span><span>TFS</span><span>Microsoft Project</span><span>AWS S3</span>
+                        </div>
+                    </article>
+                    <article class="skill-category">
+                        <i class="fas fa-rocket"></i>
+                        <h3>DevOps & CI/CD</h3>
+                        <div class="skill-list">
+                            <span>Jenkins</span><span>Octopus Deploy</span><span>CI/CD Pipelines</span><span>Build Automation</span><span>Release Management</span><span>Deployment Support</span>
+                        </div>
+                    </article>
+                    <article class="skill-category">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                        <h3>AI Development Tools</h3>
+                        <div class="skill-list">
+                            <span>Codex</span><span>Claude</span><span>AI-assisted Coding</span><span>Prompt Engineering</span><span>Code Review Support</span><span>Documentation Support</span>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p><a href="mailto:nikunj@example.com">nikunj@example.com</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Your City, Country</p>
-                        </div>
+        <section id="projects" class="projects">
+            <div class="container">
+                <p class="eyebrow centered">Project Details</p>
+                <h2 class="section-title centered">Featured Work</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-money-check-dollar"></i></div>
+                        <h3>Payroll Management System</h3>
+                        <p>Enterprise payroll platform with multi-company, multi-database architecture and secure role-based access.</p>
+                        <ul>
+                            <li>Automated payroll and tax calculation engine</li>
+                            <li>Bulk payslip generation and leave management</li>
+                            <li>Employee self-service portal and SSRS reports</li>
+                        </ul>
+                        <div class="project-tags"><span>ASP.NET MVC</span><span>SQL Server</span><span>SSRS</span></div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-truck-fast"></i></div>
+                        <h3>Shop & Ship Delivery Platform</h3>
+                        <p>Shopping delivery platform with shipment tracking, shipping rate comparison, and membership-based pricing.</p>
+                        <ul>
+                            <li>Shipment tracking functionality</li>
+                            <li>Shipping rate comparison module</li>
+                            <li>CMS-driven content management features</li>
+                        </ul>
+                        <div class="project-tags"><span>Web API</span><span>CMS</span><span>SQL Server</span></div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-shield-heart"></i></div>
+                        <h3>Healthcare Risk & Compliance</h3>
+                        <p>Healthcare compliance system for scalable architecture, contract management, policy management, and HIPAA risk tracking.</p>
+                        <ul>
+                            <li>Contract and policy management modules</li>
+                            <li>HIPAA risk assessment workflows</li>
+                            <li>Compliance tracking features</li>
+                        </ul>
+                        <div class="project-tags"><span>ASP.NET</span><span>Compliance</span><span>Architecture</span></div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>Student Management System</h3>
+                        <p>Role-based student platform covering course, exam, certification, and registration approval workflows.</p>
+                        <ul>
+                            <li>Course, exam, and certification workflows</li>
+                            <li>Registration approval process</li>
+                            <li>Role-based access control</li>
+                        </ul>
+                        <div class="project-tags"><span>ASP.NET MVC</span><span>RBAC</span><span>Workflow</span></div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-video"></i></div>
+                        <h3>Online Training Management</h3>
+                        <p>Training platform with template-based document generation, video management, room management, and material exports.</p>
+                        <ul>
+                            <li>Template-based document generation</li>
+                            <li>Video and training room management</li>
+                            <li>Training material export and printing</li>
+                        </ul>
+                        <div class="project-tags"><span>Document Generation</span><span>CMS</span><span>Training</span></div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-hotel"></i></div>
+                        <h3>Hotel Partner Application</h3>
+                        <p>Booking and accommodation management system with modules for employees, managers, admins, and customers.</p>
+                        <ul>
+                            <li>Booking and accommodation management</li>
+                            <li>Role-based module design</li>
+                            <li>Operational workflows for hotel partners</li>
+                        </ul>
+                        <div class="project-tags"><span>ASP.NET</span><span>SQL Server</span><span>Role Modules</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="resume">
+            <div class="container resume-card">
+                <div>
+                    <p class="eyebrow">Resume</p>
+                    <h2 class="section-title">Download my latest resume.</h2>
+                    <p>The latest resume PDF is included in this portfolio and linked directly for recruiters, clients, and hiring teams.</p>
+                </div>
+                <a href="assets/nikunj_resume.pdf" class="btn btn-primary" download><i class="fas fa-file-arrow-down"></i> Download Resume PDF</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container contact-wrapper">
+                <div>
+                    <p class="eyebrow">Contact</p>
+                    <h2 class="section-title">Let's build something useful.</h2>
+                    <p class="contact-copy">Use the links below or send a message from the form. I am based in Gujarat, India and open to enterprise web development and team lead opportunities.</p>
+                    <div class="contact-list">
+                        <a href="mailto:nbpvisnagar1989@gmail.com"><i class="fas fa-envelope"></i> nbpvisnagar1989@gmail.com</a>
+                        <a href="tel:+918511119275"><i class="fas fa-phone"></i> +91-8511119275</a>
+                        <a href="https://www.linkedin.com/in/nikunjkumar-patel-b6a842160/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <span><i class="fas fa-location-dot"></i> Gujarat, India</span>
                     </div>
                 </div>
-
                 <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
                 </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Nikunj Patel. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                </div>
+        <div class="container footer-content">
+            <p>&copy; 2026 Nikunj Patel. All rights reserved.</p>
+            <div class="social-links">
+                <a href="mailto:nbpvisnagar1989@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/nikunjkumar-patel-b6a842160/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="assets/nikunj_resume.pdf" aria-label="Resume PDF"><i class="fas fa-file-lines"></i></a>
             </div>
         </div>
     </footer>
