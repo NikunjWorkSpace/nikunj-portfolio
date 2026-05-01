@@ -44,18 +44,3 @@ function updateActiveLink() {
 
 window.addEventListener('scroll', updateActiveLink);
 window.addEventListener('load', updateActiveLink);
-
-const contactForm = document.querySelector('.contact-form');
-
-if (contactForm) {
-    const status = document.createElement('p');
-    status.className = 'form-status';
-    status.setAttribute('role', 'status');
-    contactForm.appendChild(status);
-
-    contactForm.addEventListener('submit', event => {
-        event.preventDefault();
-        status.textContent = 'Thanks for your message. Please connect this form to your email or backend before publishing.';
-        contactForm.reset();
-    });
-}

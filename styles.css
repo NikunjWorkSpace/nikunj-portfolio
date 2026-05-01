@@ -405,6 +405,10 @@ section {
     grid-template-columns: 0.9fr 1.1fr;
 }
 
+.contact-wrapper-single {
+    grid-template-columns: minmax(0, 760px);
+}
+
 .contact-list {
     display: grid;
     gap: 0.75rem;
